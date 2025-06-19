@@ -1,54 +1,89 @@
-# React + TypeScript + Vite
+# GitHub User Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React app to search for GitHub users and view their repositories.  
+Styled with TailwindCSS, powered by Redux Toolkit Query, and built with TypeScript.
 
-Currently, two official plugins are available:
+![screenshot](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 🔍 **Search GitHub users** by username
+- 🧑 **Dropdown list** for up to 5 recent users
+- 📦 **View repositories** for each user, including stars and descriptions
+- ⚡ **Instant feedback** for loading and errors
+- 🎨 **Responsive, clean UI** with TailwindCSS
+- 🧹 **Reset and clear** search field with a single click
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/githubuser-finder.git
+   cd githubuser-finder
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server:**
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser:**  
+   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## Usage
+
+- Enter a GitHub username and click **Search**.
+- Up to 5 recent users are shown in a dropdown list.
+- Click a user to view their repositories.
+- Click the **X** icon to clear the search field.
+- Click **Reset** to clear all results and start over.
+
+## Tech Stack
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+## Project Structure
+
+```
+src/
+  components/      # Reusable UI components
+  redux/           # Redux slices and API logic
+  types.ts         # TypeScript interfaces
+  App.tsx          # Main app component
+public/
+  favicon.svg      # Favicon
+index.html         # HTML entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Customization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Favicon:** Replace `public/favicon.svg` with your own icon.
+- **Styling:** Edit Tailwind classes in components for custom look.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+
+MIT
+
+---
+
+Made with ❤️ using React + Vite + Redux Toolkit
