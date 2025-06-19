@@ -47,7 +47,7 @@ const UserList: React.FC<Props> = ({
                   alt={`${user.login} avatar`}
                   className="w-6 h-6 rounded-full mr-3 border border-gray-200"
                 />
-                <span className="font-medium">{user.login}</span>
+                <span className="font-medium">{user.name}</span>
               </span>
             </button>
           </div>
