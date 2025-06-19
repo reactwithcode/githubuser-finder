@@ -5,14 +5,14 @@ import App from './App'
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 
-describe("GitHub User Finder App", () => {
+describe("GitHub Repositories Explorer App", () => {
   test('renders title and reset button', () => {
     render(
       <Provider store={store}>
         <App />
       </Provider>
     );
-    expect(screen.getByRole('heading', { name: /GitHub User Finder/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /GitHub Repositories Explorer/i })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Reset/i })).toBeInTheDocument();
   });
 
@@ -54,6 +54,6 @@ describe("GitHub User Finder App", () => {
     });
 
     // Check if the repo list is displayed
-    expect(await screen.findByRole('heading', { name: /Repositories/i })).toBeInTheDocument();
+    await screen.findByRole('heading', { name: /^Repositories$/i });
   });
 });

@@ -61,7 +61,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-200 flex items-center justify-center">
       <div className="bg-white rounded shadow-lg p-8 w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">GitHub User Finder</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">GitHub Repositories Explorer</h1>
         <SearchBar
           loading={loading}
           onSearch={handleSearch}
