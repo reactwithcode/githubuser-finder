@@ -20,7 +20,9 @@ const UserList: React.FC<Props> = ({
           style={{ cursor: "pointer" }}
           onClick={() => onSelectUser(user)}
         >
-          <span className={`${isDropdownOpen(user) ? "font-bold" : ""}`}>{user.login}</span>
+          <span className="flex items-center">
+            <span className={`${isDropdownOpen(user) ? "font-bold" : ""}`}>{user.login}</span>
+          </span>
           <span>
             {isDropdownOpen(user) ? (
               <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -39,7 +41,14 @@ const UserList: React.FC<Props> = ({
               className={`w-full flex justify-between items-center px-4 py-2 border rounded transition bg-gray-50 border-gray-200`}
               onClick={() => onSelectUser(user)}
             >
-              <span className="font-medium">{user.login}</span>
+              <span className="flex items-center">
+                <img
+                  src={user.avatar_url}
+                  alt={`${user.login} avatar`}
+                  className="w-6 h-6 rounded-full mr-3 border border-gray-200"
+                />
+                <span className="font-medium">{user.login}</span>
+              </span>
             </button>
           </div>
         )}
