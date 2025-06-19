@@ -3,8 +3,6 @@
 A modern React app to search for GitHub users and view their repositories.  
 Styled with TailwindCSS, powered by Redux Toolkit Query, and built with TypeScript.
 
-![screenshot](./screenshot.png)
-
 ## Features
 
 - 🔍 **Search GitHub users** by username
