@@ -54,6 +54,21 @@ Styled with TailwindCSS, powered by Redux Toolkit Query, and built with TypeScri
 - Click the **X** icon to clear the search field.
 - Click **Reset** to clear all results and start over.
 
+## Running Tests
+
+This project uses [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for unit and integration tests.
+
+To run all tests:
+
+```sh
+npm run test
+# or
+yarn test
+```
+
+- Test files are located alongside source files and use the `.spec.tsx` or `.spec.ts` extension.
+- The test environment is set up in [`jest.setup.ts`](jest.setup.ts).
+
 ## Tech Stack
 
 - [React](https://react.dev/)
