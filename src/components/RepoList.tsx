@@ -7,6 +7,7 @@ interface Props {
 
 const RepoList: React.FC<Props> = ({ repos }) => (
   <div className="mt-6 space-y-4">
+    <h2 className="text-xl font-bold mb-2">Repositories</h2>
     {repos.map(repo => (
       <div
         key={repo.id}

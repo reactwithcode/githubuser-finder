@@ -12,9 +12,9 @@ const UserList: React.FC<Props> = ({
   onSelectUser,
   isDropdownOpen,
 }) => (
-  <div className="mb-4">
+  <ul className="mb-4">
     {users.map((user) => (
-      <div key={user.id} className="mb-2">
+      <li key={user.id} className="mb-2">
         <button
           className={`w-full flex justify-between items-center px-4 py-2 border rounded transition bg-gray-100 border-gray-300`}
           style={{ cursor: "pointer" }}
@@ -43,9 +43,9 @@ const UserList: React.FC<Props> = ({
             </button>
           </div>
         )}
-      </div>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 export default UserList;
